@@ -32,7 +32,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Set Base Path
+        id: basepath
+        run: |
+          if [ "${{ github.event.repository.name }}" != "${{ github.repository_owner }}.github.io" ]; then
+            echo "basepath=/${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
+          else
+            echo "basepath=" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Build
+        env:
+          BASE_PATH: ${{ steps.basepath.outputs.basepath }}
         run: npm run build
 
       - name: Setup Pages
