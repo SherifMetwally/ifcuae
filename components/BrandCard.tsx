@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import BaseImage from './BaseImage';
 
 interface BrandCardProps {
   title: string;
@@ -23,7 +23,7 @@ export default function BrandCard({ title, description, image, imageAlt, link, d
           {title}
         </h3>
         <div className="mb-6 bg-light rounded-xl p-6 flex items-center justify-center">
-          <Image
+          <BaseImage
             src={image}
             alt={imageAlt}
             width={200}

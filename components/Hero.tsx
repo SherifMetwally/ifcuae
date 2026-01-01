@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import BaseImage from './BaseImage';
 import { useEffect, useState } from 'react';
 
 export default function Hero() {
@@ -17,7 +17,7 @@ export default function Hero() {
       
       {/* Background Image - Desktop Only */}
       <div className="hidden lg:block absolute inset-0 z-0">
-        <Image
+        <BaseImage
           src="/img/hero.png"
           alt="Hero Background"
           fill
@@ -30,7 +30,7 @@ export default function Hero() {
       {/* Mobile Hero Image - Above Text */}
       <div className="lg:hidden w-full pt-24 pb-8 px-4 flex justify-center relative z-10">
         <div className="w-full max-w-md">
-          <Image
+          <BaseImage
             src="/img/hero-m.png"
             alt="Hero"
             width={600}

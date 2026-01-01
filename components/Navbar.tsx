@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import BaseImage from './BaseImage';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image
+            <BaseImage
               src={isScrolled ? '/img/logo.png' : '/img/logo-white.png'}
               alt="IFC Logo"
               width={120}

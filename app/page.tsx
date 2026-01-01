@@ -6,7 +6,7 @@ import BrandCard from '@/components/BrandCard';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
-import Image from 'next/image';
+import BaseImage from '@/components/BaseImage';
 
 export default function Home() {
   return (
@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
                 <div className="animate-scale-in">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
+                    <BaseImage
                       src="/img/future.png"
                       alt="Future Vision"
                       width={600}
@@ -191,7 +191,7 @@ export default function Home() {
               </div>
               <div className="order-1 lg:order-2 animate-scale-in">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
+                  <BaseImage
                     src="/img/partner.png"
                     alt="Partners"
                     width={600}

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import BaseImage from './BaseImage';
 
 interface ServiceCardProps {
   number: string;
@@ -23,7 +23,7 @@ export default function ServiceCard({
     <div className={`mb-20 last:mb-0 ${reverse ? 'lg:flex-row-reverse' : ''} lg:flex gap-12 items-center`}>
       <div className={`w-full lg:w-1/2 ${reverse ? 'lg:order-2' : ''}`}>
         <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-          <Image
+          <BaseImage
             src={image}
             alt={imageAlt}
             width={600}
