@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
 
       {/* Mobile Hero Image - Above Text */}
-      <div className="lg:hidden w-full pt-24 pb-8 px-4 flex justify-center relative z-10">
+      <div className="lg:hidden w-full pt-28 sm:pt-32 pb-8 px-4 flex justify-center relative z-10">
         <div className="w-full max-w-md">
           <BaseImage
             src="/img/hero-m.png"
@@ -42,7 +42,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 flex-1 flex items-center">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 flex-1 flex items-center pt-24 sm:pt-28 lg:pt-32">
         <div className={`max-w-4xl text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 lg:mb-8 leading-tight">
             Fueling Ambition, Igniting Innovation, and Accelerating Growth.
@@ -63,12 +63,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce hidden lg:block">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-        </div>
-      </div>
     </section>
   );
 }

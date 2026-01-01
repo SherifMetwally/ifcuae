@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
+      isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-4 lg:py-6'
     }`}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between">
@@ -44,7 +44,11 @@ export default function Navbar() {
               width={120}
               height={100}
               className="transition-all duration-300"
-              style={{ maxHeight: isScrolled ? '60px' : '100px', width: 'auto' }}
+              style={{ 
+                maxHeight: isScrolled ? '50px' : 'clamp(60px, 8vw, 100px)', 
+                width: 'auto',
+                height: 'auto'
+              }}
               priority
             />
           </Link>

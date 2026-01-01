@@ -94,6 +94,35 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Navbar height constraints to prevent overlap at different zoom levels */
+nav {
+  max-height: clamp(70px, 15vh, 140px);
+  overflow: visible;
+}
+
+nav img {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+/* Ensure hero section has enough top spacing to prevent navbar overlap */
+section#home {
+  padding-top: clamp(100px, 15vh, 180px);
+}
+
+@media (min-width: 1024px) {
+  section#home {
+    padding-top: clamp(120px, 12vh, 200px);
+  }
+}
+
+@media (max-width: 640px) {
+  section#home {
+    padding-top: clamp(90px, 18vh, 160px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
